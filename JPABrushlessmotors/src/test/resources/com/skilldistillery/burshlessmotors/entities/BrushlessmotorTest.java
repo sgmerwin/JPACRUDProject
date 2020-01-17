@@ -1,6 +1,6 @@
 package com.skilldistillery.burshlessmotors.entities;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -13,10 +13,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import com.skilldistillery.brushlessmotors.entities.Brushlessmotor;
+
 class BrushlessmotorTest {
 	
 	private static EntityManagerFactory emf;
 	private EntityManager em;
+	private Brushlessmotor brushlessmotor;
+	
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -42,8 +46,9 @@ class BrushlessmotorTest {
 
 	@Disabled
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void test_brushlessmotor_entity_mapping() {
+		assertNotNull(brushlessmotor);
+		assertEquals("Dobby", brushlessmotor.getName());
 	}
 
 }

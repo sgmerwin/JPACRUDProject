@@ -1,4 +1,4 @@
-package com.skilldistillery.burshlessmotors.entities;
+package com.skilldistillery.brushlessmotors.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +9,7 @@ import javax.persistence.Id;
 public class Brushlessmotor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	
+	private int id;	
 	private String name;
 
 	public int getId() {
