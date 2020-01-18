@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Brushless Motors</title>
 </head>
 <body>
-<h1>index loaded</h1>
-
+<h2>Welcome to the Brushless Motor Site</h2>
+<form action="getMotor.do" method="GET">
+  Film ID: <input type="text" name="mid" />
+  <input type="submit" value="Show Motor" />
+</form>
 </body>
 </html>
