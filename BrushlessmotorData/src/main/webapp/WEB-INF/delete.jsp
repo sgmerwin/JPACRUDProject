@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Motor Details</title>
+<title>Delete Motor</title>
 </head>
 <body>
 <div>
@@ -20,6 +20,12 @@ RPM: ${motor.rpm}<br>
 Force in Newtons: ${motor.force}<br>
 </p>
 </div>
+<br>
+<h4>Delete the Motor</h4>
+<form action="destroyMotor.do" method="POST">
+  Motor ID: <input type="number" placeholder="${motor.id}" value="${motor.id}" name="mid" />
+  <input type="submit" value="Delete Motor" />
+</form>
 <h4>Go to home page</h4>
 <a href="getHome.do">Home</a>
 </body>
