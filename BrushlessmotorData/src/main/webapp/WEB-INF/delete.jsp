@@ -23,7 +23,7 @@ Force in Newtons: ${motor.force}<br>
 <br>
 <h4>Delete the Motor</h4>
 <form action="destroyMotor.do" method="POST">
-  Motor ID: <input type="number" placeholder="${motor.id}" value="${motor.id}" name="mid" />
+  <input type="hidden" placeholder="${motor.id}" value="${motor.id}" name="mid" />
   <input type="submit" value="Delete Motor" />
 </form>
 <h4>Go to home page</h4>

@@ -10,9 +10,9 @@ public interface MotorDAO {
 	
 	List<Brushlessmotor> findAll();
 	
-	void update(int id, String name, int current, int volt, int price, int weight, int rpm, double force);
+	void update(int id, String name, Integer current, Integer volt, Integer price, Integer weight, Integer rpm, Double force);
 	
-	void create(String name);
+	Brushlessmotor create(String name);
 	
 	boolean delete(int id);
 

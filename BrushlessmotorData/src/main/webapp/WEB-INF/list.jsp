@@ -13,7 +13,8 @@
 <table>
 <c:forEach var="motor" items="${motors}">
 <tr>
-<td><a href="getMotor.do?mid=${motor.id}">${motor.name}</a></td>
+<td><a href="getMotor.do?mid=${motor.id}">${motor.id}</a></td>
+<td>${motor.name}</td>
 </tr>
 </c:forEach>
 </table>

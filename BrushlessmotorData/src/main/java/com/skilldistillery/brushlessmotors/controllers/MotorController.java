@@ -53,18 +53,20 @@ public class MotorController {
 	}
 	
 	@RequestMapping(path="editMotor.do")
-	public String editMotor(@RequestParam Integer id, String name, Integer current, Integer volt, Integer price, Integer weight, Integer rpm, Double force, Model model) {
-	dao.update(id, name, current, volt, price, weight, rpm, force);
+	public String editMotor(@RequestParam Integer mid, String name, Integer current, Integer voltage, Integer price, Integer weight, Integer rpm, Double force, Model model) {
+	dao.update(mid, name, current, voltage, price, weight, rpm, force);
 	Brushlessmotor updateMotor = null;
-	updateMotor = dao.findById(id);
+	updateMotor = dao.findById(mid);
 	model.addAttribute("updateMotor", updateMotor);
 	return "WEB-INF/update.jsp";
 	}
 	
 	@RequestMapping(path="createMotor.do")
-	public String createMotor(@RequestParam String name) {
-	dao.create(name);
-	return "WEB-INF/index.jsp";
+	public String createMotor(@RequestParam String name, Model model) {
+	Brushlessmotor motor = null;	
+	motor = dao.create(name);
+	model.addAttribute("motor", motor);
+	return "WEB-INF/update.jsp";
 	}
 	
 	@RequestMapping(path="deleteMotor.do")
@@ -80,6 +82,12 @@ public class MotorController {
 	dao.delete(mid);
 	return "WEB-INF/index.jsp";
 	}
+	
+	@RequestMapping(path="editShowMotor.do")
+	public String createMotor(@RequestParam Integer mid) {
+	return "WEB-INF/update.jsp";
+	}
+	
 	
 	
 

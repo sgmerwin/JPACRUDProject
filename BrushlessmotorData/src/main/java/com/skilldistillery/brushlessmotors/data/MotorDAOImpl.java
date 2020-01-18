@@ -30,7 +30,8 @@ public class MotorDAOImpl implements MotorDAO{
 		return motors;
 	}
 	
-	public void update(int id, String name, int current, int volt, int price, int weight, int rpm, double force) {
+
+	public void update(int id, String name, Integer current, Integer volt, Integer price, Integer weight, Integer rpm, Double force) {
 		String jpql = "select m from Brushlessmotor m where m.id = :bindID";
 		List<Brushlessmotor> motor = em.createQuery(jpql, Brushlessmotor.class)
 		.setParameter("bindID", id)
@@ -53,7 +54,7 @@ public class MotorDAOImpl implements MotorDAO{
 		}//if
 	}//method
 	
-	public void create(String name) {
+	public Brushlessmotor create(String name) {
 		Brushlessmotor motor = new Brushlessmotor();
 		motor.setName(name);
 		//em.getTransaction().begin();
@@ -61,6 +62,7 @@ public class MotorDAOImpl implements MotorDAO{
 		//em.flush();
 		//em.getTransaction().commit();
 		//em.close();
+		return motor;
 	}
 	
 	public boolean delete(int id) {
@@ -73,7 +75,11 @@ public class MotorDAOImpl implements MotorDAO{
 		//em.close();
 		return status;
 	}
+
+	
+		
+	}
 	
 
 	
-}
+
