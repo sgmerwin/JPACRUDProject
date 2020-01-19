@@ -10,9 +10,13 @@
 <title>Motor Details</title>
 </head>
 <body id = "updatePage">
-<div>
 <h2>Motor Details</h2>
-<p>
+<div id = "y">
+<c:choose>
+  <c:when test="${empty motor}">
+  <h4>The motor is not in the database</h4>
+  </c:when>
+  <c:otherwise>
 ID: ${motor.id}<br>
 Name: ${motor.name}<br>
 Current in Amps: ${motor.current}<br>
@@ -21,17 +25,14 @@ Price in USD: ${motor.price}<br>
 Weight in Grams: ${motor.weight}<br>
 RPM: ${motor.rpm}<br>
 Force in Newtons: ${motor.force}<br>
-</p>
-</div>
 <br>
-<div>
-
 <h4>Update the motor details</h4>
 <form action="editMotor.do" method="POST">
   <input type="hidden" placeholder="${motor.id}" value="${motor.id}" name="mid" />
   <br>
-  Motor Name: <input type="text" class="btn btn-outline-primary" placeholder="${motor.name}" value="${motor.name}" name="name"/>
+  Motor Name: <input type="text" placeholder="${motor.name}" value="${motor.name}" name="name"/>
   <br>
+  
   <!--  
   Motor Current: <input type="number" placeholder="${motor.current}" value="${motor.current}" name="current"/>
   <br>
@@ -46,6 +47,7 @@ Force in Newtons: ${motor.force}<br>
    Motor Force: <input type="number" placeholder="${motor.force}" value="${motor.force}" name="force"/>
    <br>
    -->
+  
   <c:choose>
    <c:when test="${empty motor.current}"> Motor Current: <input type="number" placeholder="${0}" value="${0}" name="current"/>
    </c:when>
@@ -54,6 +56,7 @@ Force in Newtons: ${motor.force}<br>
    </c:otherwise>
    </c:choose>  
    <br>
+   
    <c:choose>
    <c:when test="${empty motor.voltage}"> Motor Voltage: <input type="number" placeholder="${0}" value="${0}" name="voltage"/>
    </c:when>
@@ -62,6 +65,7 @@ Force in Newtons: ${motor.force}<br>
    </c:otherwise>
    </c:choose>  
   <br>
+  
    <c:choose>
    <c:when test="${empty motor.price}"> Motor Price: <input type="number" placeholder="${0}" value="${0}" name="price"/>
    </c:when>
@@ -70,6 +74,7 @@ Force in Newtons: ${motor.force}<br>
    </c:otherwise>
    </c:choose>  
   <br>
+  
    <c:choose>
    <c:when test="${empty motor.weight}"> Motor Weight: <input type="number" placeholder="${0}" value="${0}" name="weight"/>
    </c:when>
@@ -78,6 +83,7 @@ Force in Newtons: ${motor.force}<br>
    </c:otherwise>
    </c:choose>  
   <br>
+  
    <c:choose>
    <c:when test="${empty motor.rpm}"> Motor RPM: <input type="number" placeholder="${0}" value="${0}" name="rpm"/>
    </c:when>
@@ -86,21 +92,22 @@ Force in Newtons: ${motor.force}<br>
    </c:otherwise>
    </c:choose>  
   <br>
+  
    <c:choose>
    <c:when test="${empty motor.force}"> Motor Force: <input type="number" placeholder="${0}" value="${0}" name="force"/>
    </c:when>
    <c:otherwise>
    Motor Force: <input type="number" placeholder="${motor.force}" value="${motor.force}" name="force"/>
    </c:otherwise>
-   </c:choose>  
+   </c:choose>
+   </form>
+   
   <br>
-  <input type="submit" value="Update Motor" />
+  <input type="submit" class="btn btn-outline-danger" value="Update Motor" />
   <br>
-</form>
-</div>
-<div>
+
 <h2>Updated Motor Details</h2>
-<p>
+
 Name: ${updateMotor.name}<br>
 Current in Amps: ${updateMotor.current}<br>
 Voltage: ${updateMotor.voltage}<br>
@@ -108,7 +115,8 @@ Price in USD: ${updateMotor.price}<br>
 Weight in Grams: ${updateMotor.weight}<br>
 RPM: ${updateMotor.rpm}<br>
 Force in Newtons: ${updateMotor.force}<br>
-</p>
+</c:otherwise> 
+   </c:choose> 
 </div>
 <h4>Go to home page</h4>
 <a href="getHome.do"  class="btn btn-info">>Home</a>

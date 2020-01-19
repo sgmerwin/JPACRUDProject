@@ -11,6 +11,7 @@
 </head>
 <body id = "showPage">
 <h2>Motor Details</h2>
+<div id = "y">
 <c:choose>
 <c:when test="${empty motor}">
 <h4>The motor is not in the database</h4>
@@ -27,15 +28,16 @@ Force in Newtons: ${motor.force}<br>
 <h4>Delete the Motor from the database</h4>
 <form action="deleteMotor.do" method="POST">
   <input type="hidden" placeholder="${motor.id}" value="${motor.id}" name="mid" />
-  Delete Motor: <input type="submit" class="btn btn-outline-primary" value="Delete Motor" />
+  Delete Motor: <input type="submit" class="btn btn-outline-danger" value="Delete Motor" />
   </form>
 <h4>Update a motor in the database</h4>
 <form action="updateMotor.do" method="GET">
  <input type="hidden" placeholder="${motor.id}" value="${motor.id}" name="mid" />
-  Update Motor: <input type="submit" class="btn btn-outline-primary" value="Update Motor" />
+  Update Motor: <input type="submit" class="btn btn-outline-danger" value="Update Motor" />
 </form>
 </c:otherwise>
 </c:choose>
+</div>
 <h4>Go to home page</h4>
 <a href="getHome.do" class="btn btn-info">Home</a>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

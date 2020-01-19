@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +10,13 @@
 <title>Delete Motor</title>
 </head>
 <body id = "deletePage">
-<div>
+<div id = "y">
+<c:choose>
+<c:when test="${empty motor}">
+<h4>The motor is not in the database</h4>
+</c:when>
+<c:otherwise>
 <h2>Motor Details</h2>
-<p>
 ID: ${motor.id}<br>
 Name: ${motor.name}<br>
 Current in Amps: ${motor.current}<br>
@@ -20,14 +25,15 @@ Price in USD: ${motor.price}<br>
 Weight in Grams: ${motor.weight}<br>
 RPM: ${motor.rpm}<br>
 Force in Newtons: ${motor.force}<br>
-</p>
-</div>
 <br>
 <h4>Delete the Motor</h4>
 <form action="destroyMotor.do" method="POST">
   <input type="hidden" placeholder="${motor.id}" value="${motor.id}" name="mid" />
-  <input type="submit" class="btn btn-outline-primary" value="Delete Motor" />
+  <input type="submit" class="btn btn-outline-danger" value="Delete Motor" />
 </form>
+</c:otherwise>
+ </c:choose> 
+ </div>
 <h4>Go to home page</h4>
 <a href="getHome.do" class="btn btn-info">Home</a>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
