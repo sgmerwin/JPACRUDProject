@@ -8,6 +8,7 @@ public class BrushlessmotorDataApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BrushlessmotorDataApplication.class, args);
+		
 	}
 
 }

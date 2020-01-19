@@ -53,11 +53,10 @@ public class MotorController {
 	}
 	
 	@RequestMapping(path="editMotor.do")
-	public String editMotor(@RequestParam Integer mid, String name, Integer current, Integer voltage, Integer price, Integer weight, Integer rpm, Double force, Model model) {
+	public String editMotor(@RequestParam int mid, String name, Integer current, Integer voltage, Integer price, Integer weight, Integer rpm, Double force, Model model) {
 	dao.update(mid, name, current, voltage, price, weight, rpm, force);
-	Brushlessmotor updateMotor = null;
-	updateMotor = dao.findById(mid);
-	model.addAttribute("updateMotor", updateMotor);
+	Brushlessmotor updateMotor = dao.findById(mid);
+	model.addAttribute("motor", updateMotor);
 	return "WEB-INF/update.jsp";
 	}
 	

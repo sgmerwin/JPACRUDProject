@@ -9,33 +9,35 @@
 <meta charset="UTF-8">
 <title>Brushless Motors</title>
 </head>
-<body id = "indexPage">						
+<body id = "indexPage">	
+<div style=" margin: auto; text-align: center; color: yellow; background-color: rgba(0, 0, 128, 0.7); width:600px; 
+    height:450px; font-family:Marker Felt, fantasy;">					
 <h2>Welcome to the Brushless Motor Site</h2>
 <h4>Get the motor details by ID</h4>
-<div id = "y">
+
 <form action="getMotor.do" method="GET">
   Motor ID: <input type="number" name="mid" />
-  Get Motor: <input type="submit" class="btn btn-outline-danger" value="Show Motor" />
+  <input type="submit" class="btn btn-outline-danger" value="Get Motor" />
 </form>
 <h4>List all motors in the database</h4>
 <form action="listMotor.do" method="GET">
-  Motor List: <input type="submit" class="btn btn-outline-danger" value="List Motors" />
+  <input type="submit" class="btn btn-outline-danger" value="List Motors" />
 </form>
 <h4>Update a motor in the database</h4>
 <form action="updateMotor.do" method="GET">
  Motor ID: <input type="number" name="mid" />
-  Update Motor: <input type="submit" class="btn btn-outline-danger" value="Update Motor" />
+  <input type="submit" class="btn btn-outline-danger" value="Update Motor" />
 </form>
 <h4>Create a motor in the database</h4>
 <form action="createMotor.do" method="POST">
   Motor Name: <input type="text" name="name"/>
-  Create Motor: <input type="submit" class="btn btn-outline-danger" value="Create Motor" />
+  <input type="submit" class="btn btn-outline-danger" value="Create Motor" />
   <br>
 </form>
 <h4>Delete a motor in the database</h4>
 <form action="deleteMotor.do" method="POST">
   Motor ID: <input type="number" name="mid"/>
-  Delete Motor: <input type="submit" class="btn btn-outline-danger" value="Delete Motor" />
+  <input type="submit" class="btn btn-outline-danger" value="Delete Motor" />
   <br>
 </form>
 </div>
