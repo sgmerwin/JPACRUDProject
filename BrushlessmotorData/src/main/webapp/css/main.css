@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+  background-repeat: no-repeat; 
+  background-size: cover;
+   background-position: center center;
+   min-height: 100vh;
+}
+
+#updatePage {background-image: url("../image/update_img.jpg"); }
+
+
+#showPage {background-image: url("../image/show_img.jpg"); }
+
+#listPage {background-image: url("../image/list_img.jpg");}
+
+#indexPage {background-image: url("../image/index_img.jpg");}
+
+#deletePage {background-image: url("../image/delete_img.jpg");}
