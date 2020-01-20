@@ -20,6 +20,8 @@ The user has options to get a motor by ID, list all of the motors in the databas
 
 <img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/list.jpg" width="300" height="300">
 
+<img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/update.jpg" width="300" height="300">
+
 
 
 ### Tech Used
