@@ -6,7 +6,7 @@
 
 <img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/JPA_img.jpg" width="500" height="500">
 
-<img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/project_img.jpg" width="500" height="500">
+<img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/project2_img.jpg" width="500" height="500">
 
 ### How to Use
 
