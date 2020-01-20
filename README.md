@@ -14,7 +14,9 @@ The BrushlessmotorData Spring Boot Project imports the Brushlessmotor java class
 
 The user has options to get a motor by ID, list all of the motors in the database, update a motor, create a motor, or delete a motor. 
 <br>
-<img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/show.jpg" width="300" height="300">
+<img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/index.jpg" width="300" height="300">
+
+<img src="https://github.com/sgmerwin/JPACRUDProject/blob/master/index.jpg" width="300" height="300">
 
 ### Tech Used
 
